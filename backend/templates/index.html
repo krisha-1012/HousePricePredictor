@@ -1,267 +1,329 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>AI House Predictor Home</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "primary": "#135bec",
-              "background-light": "#f6f6f8",
-              "background-dark": "#101622",
-              "success-green": "#2d6a4f",
-            },
-            fontFamily: {
-              "display": ["Inter", "sans-serif"]
-            },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>AI House Predictor Home</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#135bec",
+            "background-light": "#f6f6f8",
+            "background-dark": "#101622",
+            "success-green": "#2d6a4f",
           },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
         },
-      }
-    </script>
-<style>
-      body { font-family: 'Inter', sans-serif; }
-      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24 }
-    </style>
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+    }
+  </style>
 </head>
+
 <body class="bg-background-light dark:bg-background-dark font-display transition-colors duration-200">
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-<div class="layout-container flex h-full grow flex-col">
-<!-- Header / Navigation -->
-<div class="flex justify-center bg-white dark:bg-background-dark border-b border-solid border-[#f0f2f4] dark:border-slate-800 sticky top-0 z-50">
-<div class="layout-content-container flex flex-col w-full max-w-[1280px] flex-1">
-<header class="flex items-center justify-between whitespace-nowrap px-10 py-3">
-<div class="flex items-center gap-3 text-primary">
-<div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
-<span class="material-symbols-outlined">home_work</span>
-</div>
-<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">AI House Predictor</h2>
-</div>
-<div class="flex flex-1 justify-end gap-8">
-<div class="hidden md:flex items-center gap-9">
-<a class="text-[#111318] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#how-it-works">How it Works</a>
-<a class="text-[#111318] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#impact">Social Impact</a>
-<a class="text-[#111318] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#about">About Us</a>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-all">
-<span class="truncate">Start Prediction</span>
-</button>
-</div>
-</header>
-</div>
-</div>
-<!-- Hero Section -->
-<div class="flex justify-center py-10 md:py-20">
-<div class="layout-content-container flex flex-col max-w-[1280px] flex-1 px-10">
-<div class="@container">
-<div class="flex flex-col gap-10 md:gap-16 @[864px]:flex-row items-center">
-<div class="flex flex-col gap-8 @[864px]:w-1/2">
-<div class="flex flex-col gap-4 text-left">
-<span class="text-primary font-bold tracking-widest uppercase text-xs">For Rural &amp; Semi-Urban Futures</span>
-<h1 class="text-[#111318] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-6xl">
-                                    Empowering Rural Communities through Fair Property Pricing
-                                </h1>
-<h2 class="text-[#4b5563] dark:text-gray-400 text-lg font-normal leading-relaxed max-w-[540px]">
-                                    Use our Smart AI to get instant, accurate house price estimates. We bring data-driven transparency to neighborhoods that need it most.
-                                </h2>
-</div>
-<div class="flex flex-col sm:flex-row gap-4">
-<button class="flex min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">
-<span class="truncate">Start Free Prediction</span>
-</button>
-<button class="flex min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-6 border-2 border-[#dbdfe6] dark:border-slate-700 text-[#111318] dark:text-white text-base font-bold leading-normal hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors">
-<span class="truncate">Learn More</span>
-</button>
-</div>
-</div>
-<div class="w-full @[864px]:w-1/2 relative">
-<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-2xl shadow-2xl overflow-hidden border-8 border-white dark:border-slate-800" data-alt="Modern rural home in a green landscape" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAlKtgcuTALgFGqr_KFaYLVzyFaNdrzgW6A4AJgtQyUWK_9le4ayNriz0wwlaeq1MPFKqlXAZ0pHzfvhca3_IL7Tfc-nSoQ_fZvAfj41cKnpP7EbnTdi1WUSAwuw2YBoG6PF4-Yt1udFxzyoMvHqVOSrccYDsIR8sbbO2aAymxwprYhYXhwnB3sUK0_jNQDitpX0nUyXI0yy8As-A6g1qSa36i1t2DuLWNSWQQ9mb99ZgitTMdFSZUTmoZ5wedZ2Kyu1QYEecw1gDXA");'>
-<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-</div>
-<!-- Floating Card UI Element -->
-<div class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-6 rounded-xl shadow-xl hidden lg:block border border-[#f0f2f4] dark:border-slate-700">
-<div class="flex items-center gap-4">
-<div class="bg-green-100 dark:bg-green-900/30 p-2 rounded-full text-green-600">
-<span class="material-symbols-outlined">trending_up</span>
-</div>
-<div>
-<p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Market Accuracy</p>
-<p class="text-xl font-bold dark:text-white">98.4%</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Stats Section -->
-<div class="flex justify-center py-10 bg-white/50 dark:bg-slate-900/50">
-<div class="layout-content-container flex flex-col max-w-[1280px] flex-1 px-10">
-<div class="flex flex-wrap gap-6 justify-center">
-<div class="flex min-w-[200px] flex-1 flex-col gap-2 rounded-2xl p-8 border border-[#dbdfe6] dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm">
-<p class="text-[#616f89] dark:text-gray-400 text-sm font-bold uppercase tracking-wider">Villages Covered</p>
-<p class="text-[#111318] dark:text-white tracking-light text-4xl font-black leading-tight">500+</p>
-<div class="w-12 h-1 bg-primary rounded-full mt-2"></div>
-</div>
-<div class="flex min-w-[200px] flex-1 flex-col gap-2 rounded-2xl p-8 border border-[#dbdfe6] dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm">
-<p class="text-[#616f89] dark:text-gray-400 text-sm font-bold uppercase tracking-wider">Total Predictions</p>
-<p class="text-[#111318] dark:text-white tracking-light text-4xl font-black leading-tight">10k+</p>
-<div class="w-12 h-1 bg-primary rounded-full mt-2"></div>
-</div>
-<div class="flex min-w-[200px] flex-1 flex-col gap-2 rounded-2xl p-8 border border-[#dbdfe6] dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm">
-<p class="text-[#616f89] dark:text-gray-400 text-sm font-bold uppercase tracking-wider">Price Transparency</p>
-<p class="text-[#111318] dark:text-white tracking-light text-4xl font-black leading-tight">100%</p>
-<div class="w-12 h-1 bg-primary rounded-full mt-2"></div>
-</div>
-</div>
-</div>
-</div>
-<!-- How it Works Section -->
-<div class="flex justify-center py-20" id="how-it-works">
-<div class="layout-content-container flex flex-col max-w-[1280px] flex-1 px-10">
-<div class="flex flex-col gap-12 @container">
-<div class="flex flex-col gap-4 text-center items-center">
-<h2 class="text-[#111318] dark:text-white tracking-tight text-3xl font-black leading-tight @[480px]:text-4xl max-w-[720px]">
-                            How it Works
-                        </h2>
-<p class="text-[#4b5563] dark:text-gray-400 text-lg font-normal leading-normal max-w-[600px]">
-                            Our three-step process makes property valuation simple and accessible for everyone, regardless of technical expertise.
-                        </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-0">
-<div class="flex flex-col gap-6 rounded-2xl border border-[#dbdfe6] dark:border-slate-700 bg-white dark:bg-slate-800 p-8 hover:shadow-xl transition-shadow">
-<div class="size-14 rounded-full bg-primary/10 text-primary flex items-center justify-center">
-<span class="material-symbols-outlined !text-3xl">edit_note</span>
-</div>
-<div class="flex flex-col gap-2">
-<h3 class="text-[#111318] dark:text-white text-xl font-bold leading-tight">1. Input Details</h3>
-<p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-relaxed">
-                                    Provide basic information like house size, location coordinates, and proximity to local amenities.
-                                </p>
-</div>
-</div>
-<div class="flex flex-col gap-6 rounded-2xl border border-[#dbdfe6] dark:border-slate-700 bg-white dark:bg-slate-800 p-8 hover:shadow-xl transition-shadow relative">
-<div class="size-14 rounded-full bg-primary/10 text-primary flex items-center justify-center">
-<span class="material-symbols-outlined !text-3xl">psychology</span>
-</div>
-<div class="flex flex-col gap-2">
-<h3 class="text-[#111318] dark:text-white text-xl font-bold leading-tight">2. AI Analysis</h3>
-<p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-relaxed">
-                                    Our advanced neural networks, specifically trained for rural market dynamics, process your data in seconds.
-                                </p>
-</div>
-</div>
-<div class="flex flex-col gap-6 rounded-2xl border border-[#dbdfe6] dark:border-slate-700 bg-white dark:bg-slate-800 p-8 hover:shadow-xl transition-shadow">
-<div class="size-14 rounded-full bg-primary/10 text-primary flex items-center justify-center">
-<span class="material-symbols-outlined !text-3xl">task_alt</span>
-</div>
-<div class="flex flex-col gap-2">
-<h3 class="text-[#111318] dark:text-white text-xl font-bold leading-tight">3. Instant Result</h3>
-<p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-relaxed">
-                                    Receive a comprehensive valuation report instantly, helping you make informed decisions for your future.
-                                </p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Social Impact Section -->
-<div class="flex justify-center py-20 bg-primary/5 dark:bg-primary/10" id="impact">
-<div class="layout-content-container flex flex-col max-w-[1280px] flex-1 px-10">
-<div class="flex flex-col gap-12 @container">
-<div class="flex flex-col gap-4">
-<h2 class="text-[#111318] dark:text-white tracking-tight text-3xl font-black leading-tight @[480px]:text-4xl max-w-[720px]">
-                            Our Social Impact
-                        </h2>
-<p class="text-[#4b5563] dark:text-gray-400 text-lg font-normal leading-normal max-w-[720px]">
-                            We are dedicated to bridging the information gap and ensuring fair pricing for every rural homeowner, protecting them from market exploitation.
-                        </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="group flex flex-col gap-4 pb-3 bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all">
-<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="People collaborating in a village meeting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDl6YueC_cDJMDkUCnV_aWyF1TtI_qvgfwkgld98GWDM0L0WPgsXCGNnwarMnvGCaWHLcgBUo1zv8j1kKIhdU6NwJY3I3TYoKqMeQsccyRUfzDpDa27EA_-id2nnOmEekZB6a2xkSaXej5YVxjkFE55w639Nt835bkm5jXhpI5dRXiTL1qxq7h1u5i362_P0a2r8x2yCOIKTfL9eq8o7R6IpU2mo7oISYmLOSXxFGvaeFtZrBrg9xLy6hcSe5ONyxe1dThyZJKxK-1D");'></div>
-<div class="px-6 py-4">
-<div class="flex items-center gap-2 mb-2">
-<span class="material-symbols-outlined text-primary">balance</span>
-<p class="text-[#111318] dark:text-white text-xl font-bold leading-normal">Fair Pricing for All</p>
-</div>
-<p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-relaxed">
-                                    Preventing predatory pricing practices by providing residents with data-backed market valuations that were previously inaccessible.
-                                </p>
-</div>
-</div>
-<div class="group flex flex-col gap-4 pb-3 bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all">
-<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="A small family farm at sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7bwtf1j8b5dK9ePjm7H6MO4PbEuvLbpPAGZiKqXgxYZ6unjb6nthVud34CAcJWmu44PaHsNMNZVKjpkda9iIJ8K9_TCgYt5QPbeTxBg71b2x7CRoYDbZ8pm1tB0I-_9IStYAZkUOtXxwl1O4sfASunIQtnx0nwmH2lhUDiV790nasrcRDXX26fi3SHtf6OIR2hWKmEIjsAlLZAhJujKopcd3fsJbioRTI8BWf8JTbEzxtGujnsrIqIAnqS2pJhB8UTypO7Qtdh-R8");'></div>
-<div class="px-6 py-4">
-<div class="flex items-center gap-2 mb-2">
-<span class="material-symbols-outlined text-primary">groups</span>
-<p class="text-[#111318] dark:text-white text-xl font-bold leading-normal">Community Empowerment</p>
-</div>
-<p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-relaxed">
-                                    Empowering rural families with the knowledge to make informed financial decisions, build generational wealth, and stabilize local economies.
-                                </p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Footer -->
-<footer class="bg-white dark:bg-background-dark border-t border-[#f0f2f4] dark:border-slate-800 py-16">
-<div class="max-w-[1280px] mx-auto px-10 flex flex-col md:flex-row justify-between gap-12">
-<div class="flex flex-col gap-6 max-w-[320px]">
-<div class="flex items-center gap-3 text-primary">
-<div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
-<span class="material-symbols-outlined">home_work</span>
-</div>
-<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight">AI House Predictor</h2>
-</div>
-<p class="text-[#616f89] dark:text-gray-400 text-sm leading-relaxed">
-                        Democratizing real estate data for rural and semi-urban communities worldwide. Join our mission for a fairer future.
-                    </p>
-<div class="flex gap-4">
-<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
-<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
-<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
-</div>
-</div>
-<div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
-<div class="flex flex-col gap-4">
-<h4 class="font-bold text-[#111318] dark:text-white uppercase text-xs tracking-widest">Platform</h4>
-<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Predictor</a>
-<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Data Sources</a>
-<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">API</a>
-</div>
-<div class="flex flex-col gap-4">
-<h4 class="font-bold text-[#111318] dark:text-white uppercase text-xs tracking-widest">Company</h4>
-<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">About Us</a>
-<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Impact Stories</a>
-<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Careers</a>
-</div>
-<div class="flex flex-col gap-4">
-<h4 class="font-bold text-[#111318] dark:text-white uppercase text-xs tracking-widest">Legal</h4>
-<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Privacy</a>
-<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Terms</a>
-<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Cookie Policy</a>
-</div>
-</div>
-</div>
-<div class="max-w-[1280px] mx-auto px-10 mt-16 pt-8 border-t border-[#f0f2f4] dark:border-slate-800">
-<p class="text-[#616f89] dark:text-gray-500 text-xs text-center md:text-left">
-                    © 2023 AI House Predictor. All rights reserved. Built with passion for rural development.
-                </p>
-</div>
-</footer>
-</div>
-</div>
-</body></html>
+  <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+    <div class="layout-container flex h-full grow flex-col">
+      <!-- Header / Navigation -->
+      <div
+        class="flex justify-center bg-white dark:bg-background-dark border-b border-solid border-[#f0f2f4] dark:border-slate-800 sticky top-0 z-50">
+        <div class="layout-content-container flex flex-col w-full max-w-[1280px] flex-1">
+          <header class="flex items-center justify-between whitespace-nowrap px-10 py-3">
+            <div class="flex items-center gap-3 text-primary">
+              <div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
+                <span class="material-symbols-outlined">home_work</span>
+              </div>
+              <h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">AI House
+                Predictor</h2>
+            </div>
+            <div class="flex flex-1 justify-end gap-8">
+              <div class="hidden md:flex items-center gap-9">
+                <a class="text-[#111318] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors"
+                  href="#how-it-works">How it Works</a>
+                <a class="text-[#111318] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors"
+                  href="#impact">Social Impact</a>
+                <a class="text-[#111318] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors"
+                  href="#about">About Us</a>
+              </div>
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-all">
+                <a href="/predictor">
+                  <span class="truncate">Start Prediction</span>
+                </a>
+              </button>
+            </div>
+          </header>
+        </div>
+      </div>
+      <!-- Hero Section -->
+      <div class="flex justify-center py-10 md:py-20">
+        <div class="layout-content-container flex flex-col max-w-[1280px] flex-1 px-10">
+          <div class="@container">
+            <div class="flex flex-col gap-10 md:gap-16 @[864px]:flex-row items-center">
+              <div class="flex flex-col gap-8 @[864px]:w-1/2">
+                <div class="flex flex-col gap-4 text-left">
+                  <span class="text-primary font-bold tracking-widest uppercase text-xs">For Rural &amp; Semi-Urban
+                    Futures</span>
+                  <h1
+                    class="text-[#111318] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-6xl">
+                    Empowering Rural Communities through Fair Property Pricing
+                  </h1>
+                  <h2 class="text-[#4b5563] dark:text-gray-400 text-lg font-normal leading-relaxed max-w-[540px]">
+                    Use our Smart AI to get instant, accurate house price estimates. We bring data-driven transparency
+                    to neighborhoods that need it most.
+                  </h2>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4">
+                  <button
+                    class="flex min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">
+                    <span class="truncate">Start Free Prediction</span>
+                  </button>
+                  <button
+                    class="flex min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-6 border-2 border-[#dbdfe6] dark:border-slate-700 text-[#111318] dark:text-white text-base font-bold leading-normal hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors">
+                    <span class="truncate">Learn More</span>
+                  </button>
+                </div>
+              </div>
+              <div class="w-full @[864px]:w-1/2 relative">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-2xl shadow-2xl overflow-hidden border-8 border-white dark:border-slate-800"
+                  data-alt="Modern rural home in a green landscape"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAlKtgcuTALgFGqr_KFaYLVzyFaNdrzgW6A4AJgtQyUWK_9le4ayNriz0wwlaeq1MPFKqlXAZ0pHzfvhca3_IL7Tfc-nSoQ_fZvAfj41cKnpP7EbnTdi1WUSAwuw2YBoG6PF4-Yt1udFxzyoMvHqVOSrccYDsIR8sbbO2aAymxwprYhYXhwnB3sUK0_jNQDitpX0nUyXI0yy8As-A6g1qSa36i1t2DuLWNSWQQ9mb99ZgitTMdFSZUTmoZ5wedZ2Kyu1QYEecw1gDXA");'>
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                </div>
+                <!-- Floating Card UI Element -->
+                <div
+                  class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-6 rounded-xl shadow-xl hidden lg:block border border-[#f0f2f4] dark:border-slate-700">
+                  <div class="flex items-center gap-4">
+                    <div class="bg-green-100 dark:bg-green-900/30 p-2 rounded-full text-green-600">
+                      <span class="material-symbols-outlined">trending_up</span>
+                    </div>
+                    <div>
+                      <p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Market Accuracy</p>
+                      <p class="text-xl font-bold dark:text-white">98.4%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Stats Section -->
+      <div class="flex justify-center py-10 bg-white/50 dark:bg-slate-900/50">
+        <div class="layout-content-container flex flex-col max-w-[1280px] flex-1 px-10">
+          <div class="flex flex-wrap gap-6 justify-center">
+            <div
+              class="flex min-w-[200px] flex-1 flex-col gap-2 rounded-2xl p-8 border border-[#dbdfe6] dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm">
+              <p class="text-[#616f89] dark:text-gray-400 text-sm font-bold uppercase tracking-wider">Villages Covered
+              </p>
+              <p class="text-[#111318] dark:text-white tracking-light text-4xl font-black leading-tight">500+</p>
+              <div class="w-12 h-1 bg-primary rounded-full mt-2"></div>
+            </div>
+            <div
+              class="flex min-w-[200px] flex-1 flex-col gap-2 rounded-2xl p-8 border border-[#dbdfe6] dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm">
+              <p class="text-[#616f89] dark:text-gray-400 text-sm font-bold uppercase tracking-wider">Total Predictions
+              </p>
+              <p class="text-[#111318] dark:text-white tracking-light text-4xl font-black leading-tight">10k+</p>
+              <div class="w-12 h-1 bg-primary rounded-full mt-2"></div>
+            </div>
+            <div
+              class="flex min-w-[200px] flex-1 flex-col gap-2 rounded-2xl p-8 border border-[#dbdfe6] dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm">
+              <p class="text-[#616f89] dark:text-gray-400 text-sm font-bold uppercase tracking-wider">Price Transparency
+              </p>
+              <p class="text-[#111318] dark:text-white tracking-light text-4xl font-black leading-tight">100%</p>
+              <div class="w-12 h-1 bg-primary rounded-full mt-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- How it Works Section -->
+      <div class="flex justify-center py-20" id="how-it-works">
+        <div class="layout-content-container flex flex-col max-w-[1280px] flex-1 px-10">
+          <div class="flex flex-col gap-12 @container">
+            <div class="flex flex-col gap-4 text-center items-center">
+              <h2
+                class="text-[#111318] dark:text-white tracking-tight text-3xl font-black leading-tight @[480px]:text-4xl max-w-[720px]">
+                How it Works
+              </h2>
+              <p class="text-[#4b5563] dark:text-gray-400 text-lg font-normal leading-normal max-w-[600px]">
+                Our three-step process makes property valuation simple and accessible for everyone, regardless of
+                technical expertise.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-0">
+              <div
+                class="flex flex-col gap-6 rounded-2xl border border-[#dbdfe6] dark:border-slate-700 bg-white dark:bg-slate-800 p-8 hover:shadow-xl transition-shadow">
+                <div class="size-14 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined !text-3xl">edit_note</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h3 class="text-[#111318] dark:text-white text-xl font-bold leading-tight">1. Input Details</h3>
+                  <p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-relaxed">
+                    Provide basic information like house size, location coordinates, and proximity to local amenities.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-6 rounded-2xl border border-[#dbdfe6] dark:border-slate-700 bg-white dark:bg-slate-800 p-8 hover:shadow-xl transition-shadow relative">
+                <div class="size-14 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined !text-3xl">psychology</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h3 class="text-[#111318] dark:text-white text-xl font-bold leading-tight">2. AI Analysis</h3>
+                  <p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-relaxed">
+                    Our advanced neural networks, specifically trained for rural market dynamics, process your data in
+                    seconds.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-6 rounded-2xl border border-[#dbdfe6] dark:border-slate-700 bg-white dark:bg-slate-800 p-8 hover:shadow-xl transition-shadow">
+                <div class="size-14 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined !text-3xl">task_alt</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h3 class="text-[#111318] dark:text-white text-xl font-bold leading-tight">3. Instant Result</h3>
+                  <p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-relaxed">
+                    Receive a comprehensive valuation report instantly, helping you make informed decisions for your
+                    future.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Social Impact Section -->
+      <div class="flex justify-center py-20 bg-primary/5 dark:bg-primary/10" id="impact">
+        <div class="layout-content-container flex flex-col max-w-[1280px] flex-1 px-10">
+          <div class="flex flex-col gap-12 @container">
+            <div class="flex flex-col gap-4">
+              <h2
+                class="text-[#111318] dark:text-white tracking-tight text-3xl font-black leading-tight @[480px]:text-4xl max-w-[720px]">
+                Our Social Impact
+              </h2>
+              <p class="text-[#4b5563] dark:text-gray-400 text-lg font-normal leading-normal max-w-[720px]">
+                We are dedicated to bridging the information gap and ensuring fair pricing for every rural homeowner,
+                protecting them from market exploitation.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div
+                class="group flex flex-col gap-4 pb-3 bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover transform group-hover:scale-105 transition-transform duration-500"
+                  data-alt="People collaborating in a village meeting"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDl6YueC_cDJMDkUCnV_aWyF1TtI_qvgfwkgld98GWDM0L0WPgsXCGNnwarMnvGCaWHLcgBUo1zv8j1kKIhdU6NwJY3I3TYoKqMeQsccyRUfzDpDa27EA_-id2nnOmEekZB6a2xkSaXej5YVxjkFE55w639Nt835bkm5jXhpI5dRXiTL1qxq7h1u5i362_P0a2r8x2yCOIKTfL9eq8o7R6IpU2mo7oISYmLOSXxFGvaeFtZrBrg9xLy6hcSe5ONyxe1dThyZJKxK-1D");'>
+                </div>
+                <div class="px-6 py-4">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="material-symbols-outlined text-primary">balance</span>
+                    <p class="text-[#111318] dark:text-white text-xl font-bold leading-normal">Fair Pricing for All</p>
+                  </div>
+                  <p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-relaxed">
+                    Preventing predatory pricing practices by providing residents with data-backed market valuations
+                    that were previously inaccessible.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group flex flex-col gap-4 pb-3 bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover transform group-hover:scale-105 transition-transform duration-500"
+                  data-alt="A small family farm at sunset"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7bwtf1j8b5dK9ePjm7H6MO4PbEuvLbpPAGZiKqXgxYZ6unjb6nthVud34CAcJWmu44PaHsNMNZVKjpkda9iIJ8K9_TCgYt5QPbeTxBg71b2x7CRoYDbZ8pm1tB0I-_9IStYAZkUOtXxwl1O4sfASunIQtnx0nwmH2lhUDiV790nasrcRDXX26fi3SHtf6OIR2hWKmEIjsAlLZAhJujKopcd3fsJbioRTI8BWf8JTbEzxtGujnsrIqIAnqS2pJhB8UTypO7Qtdh-R8");'>
+                </div>
+                <div class="px-6 py-4">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="material-symbols-outlined text-primary">groups</span>
+                    <p class="text-[#111318] dark:text-white text-xl font-bold leading-normal">Community Empowerment</p>
+                  </div>
+                  <p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-relaxed">
+                    Empowering rural families with the knowledge to make informed financial decisions, build
+                    generational wealth, and stabilize local economies.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer class="bg-white dark:bg-background-dark border-t border-[#f0f2f4] dark:border-slate-800 py-16">
+        <div class="max-w-[1280px] mx-auto px-10 flex flex-col md:flex-row justify-between gap-12">
+          <div class="flex flex-col gap-6 max-w-[320px]">
+            <div class="flex items-center gap-3 text-primary">
+              <div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
+                <span class="material-symbols-outlined">home_work</span>
+              </div>
+              <h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight">AI House Predictor</h2>
+            </div>
+            <p class="text-[#616f89] dark:text-gray-400 text-sm leading-relaxed">
+              Democratizing real estate data for rural and semi-urban communities worldwide. Join our mission for a
+              fairer future.
+            </p>
+            <div class="flex gap-4">
+              <a class="text-gray-400 hover:text-primary transition-colors" href="#"><span
+                  class="material-symbols-outlined">public</span></a>
+              <a class="text-gray-400 hover:text-primary transition-colors" href="#"><span
+                  class="material-symbols-outlined">alternate_email</span></a>
+              <a class="text-gray-400 hover:text-primary transition-colors" href="#"><span
+                  class="material-symbols-outlined">share</span></a>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
+            <div class="flex flex-col gap-4">
+              <h4 class="font-bold text-[#111318] dark:text-white uppercase text-xs tracking-widest">Platform</h4>
+              <a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Predictor</a>
+              <a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Data Sources</a>
+              <a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">API</a>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h4 class="font-bold text-[#111318] dark:text-white uppercase text-xs tracking-widest">Company</h4>
+              <a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">About Us</a>
+              <a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Impact Stories</a>
+              <a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Careers</a>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h4 class="font-bold text-[#111318] dark:text-white uppercase text-xs tracking-widest">Legal</h4>
+              <a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Privacy</a>
+              <a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Terms</a>
+              <a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-[1280px] mx-auto px-10 mt-16 pt-8 border-t border-[#f0f2f4] dark:border-slate-800">
+          <p class="text-[#616f89] dark:text-gray-500 text-xs text-center md:text-left">
+            © 2023 AI House Predictor. All rights reserved. Built with passion for rural development.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>
