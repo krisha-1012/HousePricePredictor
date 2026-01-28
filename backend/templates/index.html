@@ -1,429 +1,267 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+
+<html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>PASTEL | Luxury Fashion Rental Lookbook</title>
+<title>AI House Predictor Home</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        "primary-blush": "#f2c1be",
-                        "accent-lavender": "#e6e0f3",
-                        "accent-mint": "#dcf2e9",
-                        "deep-mocha": "#4a3b39",
-                        "soft-charcoal": "#545e66",
-                        "cream-bg": "#fdfaf5",
-                        "surface": "#ffffff",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "sans-serif"],
-                        "serif": ["Playfair Display", "serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "3xl": "3rem", "full": "9999px" },
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#135bec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101622",
+              "success-green": "#2d6a4f",
             },
-        }
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
     </script>
-<style type="text/tailwindcss">
-        .glass-nav {
-            background: rgba(253, 250, 245, 0.8);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(74, 59, 57, 0.08);
-        }
-        .glass-input {
-            background: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(242, 193, 190, 0.3);
-        }
-        .text-gradient {
-            background: linear-gradient(to right, #4a3b39, #f2c1be);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #fdfaf5;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #f2c1be;
-            border-radius: 10px;
-        }
+<style>
+      body { font-family: 'Inter', sans-serif; }
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24 }
     </style>
 </head>
-<body class="bg-cream-bg font-display text-deep-mocha selection:bg-primary-blush selection:text-deep-mocha">
-<header class="top-0 left-0 right-0 z-50 px-6 py-4">
-<nav class="max-w-7xl mx-auto flex items-center justify-between glass-nav px-8 py-3 rounded-full shadow-lg">
-<div class="flex items-center gap-8">
-<div class="flex items-center gap-3">
-<div class="size-8 bg-primary-blush rounded-lg flex items-center justify-center text-deep-mocha">
-<span class="material-symbols-outlined text-xl">temp_preferences_custom</span>
+<body class="bg-background-light dark:bg-background-dark font-display transition-colors duration-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header / Navigation -->
+<div class="flex justify-center bg-white dark:bg-background-dark border-b border-solid border-[#f0f2f4] dark:border-slate-800 sticky top-0 z-50">
+<div class="layout-content-container flex flex-col w-full max-w-[1280px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap px-10 py-3">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined">home_work</span>
 </div>
-<h2 class="text-xl font-bold tracking-tighter font-display uppercase text-deep-mocha text-nowrap">PASTEL</h2>
+<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">AI House Predictor</h2>
 </div>
-<div class="hidden md:flex items-center gap-8">
-<a class="text-sm font-medium hover:text-primary-blush transition-colors text-soft-charcoal" href="catalog.html">Archive</a>
-<a class="text-sm font-medium hover:text-primary-blush transition-colors text-soft-charcoal" href="#">Fit & Care</a>
-<a class="text-sm font-medium hover:text-primary-blush transition-colors text-soft-charcoal" href="#">Impact</a>
-<a class="text-sm font-medium hover:text-primary-blush transition-colors text-soft-charcoal" href="#">About Us</a>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-[#111318] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#how-it-works">How it Works</a>
+<a class="text-[#111318] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#impact">Social Impact</a>
+<a class="text-[#111318] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#about">About Us</a>
 </div>
-</div>
-<div class="flex items-center gap-6">
-<button class="group p-2 hover:bg-accent-lavender/50 rounded-full text-deep-mocha transition-colors">
-    <span class="material-symbols-outlined group-hover:fill-1">favorite</span>
-    <span class="absolute top-1 right-1 text-[9px] bg-primary-blush text-deep-mocha rounded-full px-1.5">
-</span>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-all">
+<span class="truncate">Start Prediction</span>
 </button>
-
-<div class="flex items-center gap-4">
-<button class="p-2 hover:bg-accent-lavender/50 rounded-full relative text-deep-mocha">
-<span class="material-symbols-outlined">shopping_bag</span>
-<span class="absolute top-1 right-1 size-2 bg-primary-blush rounded-full"></span>
-</button>
-<a href="register.html">
-    <button class="bg-primary-blush hover:bg-primary-blush/80 text-deep-mocha px-6 py-2 rounded-full text-sm font-bold transition-all transform hover:scale-105">
-        Sign In
-    </button>
-</a>
 </div>
-</div>
-</nav>
 </header>
-<main class="pt-23">
-<section class="max-w-7xl mx-auto px-6 mb-20">
-<div class="relative overflow-hidden rounded-[2rem] bg-accent-lavender/20 min-h-[700px] flex items-center group border border-primary-blush/20">
-<div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-gradient-to-r from-cream-bg/90 via-cream-bg/40 to-transparent z-10"></div>
-<div class="w-full h-full bg-cover bg-center transition-transform duration-[2000ms] group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAocbtibI0Q1HcWaL1--V1mkgide5e96Dff80FwgVp-p6DScVPJAlcPSLIP7K6Z7Wlc-bssdFUcMDFq1sEeTIMfAhMz-tiy7Gfn66TtXDdl9mRTxzzBdwFEvffBzghlHDn3osV9dPE3yf_46Fqz23ndRbWFGn9V9XAyiQan5ktGgc40F2tGNAdF5sd9AMyFQ68BdMjDFteeAtv8xhxYQlS4CJuaryEohxU7e8pvt3prCtN1YLgxvzodZae7c17VTNPCv0MpxQyBu18');">
 </div>
 </div>
-<div class="relative z-20 px-12 max-w-2xl">
-<span class="text-deep-mocha/60 font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Summer Rental Lookbook 2024</span>
-<h1 class="text-deep-mocha text-6xl md:text-8xl font-serif italic mb-6 leading-tight">
-                        Ethereal <br/><span class="not-italic font-display font-black text-gradient">Moments.</span>
-</h1>
-<p class="text-soft-charcoal text-lg mb-10 leading-relaxed font-light">
-                        Curated high-end fashion rentals designed for the conscious romantic. Experience luxury aesthetics in soft hues without the environmental footprint.
+<!-- Hero Section -->
+<div class="flex justify-center py-10 md:py-20">
+<div class="layout-content-container flex flex-col max-w-[1280px] flex-1 px-10">
+<div class="@container">
+<div class="flex flex-col gap-10 md:gap-16 @[864px]:flex-row items-center">
+<div class="flex flex-col gap-8 @[864px]:w-1/2">
+<div class="flex flex-col gap-4 text-left">
+<span class="text-primary font-bold tracking-widest uppercase text-xs">For Rural &amp; Semi-Urban Futures</span>
+<h1 class="text-[#111318] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-6xl">
+                                    Empowering Rural Communities through Fair Property Pricing
+                                </h1>
+<h2 class="text-[#4b5563] dark:text-gray-400 text-lg font-normal leading-relaxed max-w-[540px]">
+                                    Use our Smart AI to get instant, accurate house price estimates. We bring data-driven transparency to neighborhoods that need it most.
+                                </h2>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="flex min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">
+<span class="truncate">Start Free Prediction</span>
+</button>
+<button class="flex min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-6 border-2 border-[#dbdfe6] dark:border-slate-700 text-[#111318] dark:text-white text-base font-bold leading-normal hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors">
+<span class="truncate">Learn More</span>
+</button>
+</div>
+</div>
+<div class="w-full @[864px]:w-1/2 relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-2xl shadow-2xl overflow-hidden border-8 border-white dark:border-slate-800" data-alt="Modern rural home in a green landscape" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAlKtgcuTALgFGqr_KFaYLVzyFaNdrzgW6A4AJgtQyUWK_9le4ayNriz0wwlaeq1MPFKqlXAZ0pHzfvhca3_IL7Tfc-nSoQ_fZvAfj41cKnpP7EbnTdi1WUSAwuw2YBoG6PF4-Yt1udFxzyoMvHqVOSrccYDsIR8sbbO2aAymxwprYhYXhwnB3sUK0_jNQDitpX0nUyXI0yy8As-A6g1qSa36i1t2DuLWNSWQQ9mb99ZgitTMdFSZUTmoZ5wedZ2Kyu1QYEecw1gDXA");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<!-- Floating Card UI Element -->
+<div class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-6 rounded-xl shadow-xl hidden lg:block border border-[#f0f2f4] dark:border-slate-700">
+<div class="flex items-center gap-4">
+<div class="bg-green-100 dark:bg-green-900/30 p-2 rounded-full text-green-600">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Market Accuracy</p>
+<p class="text-xl font-bold dark:text-white">98.4%</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats Section -->
+<div class="flex justify-center py-10 bg-white/50 dark:bg-slate-900/50">
+<div class="layout-content-container flex flex-col max-w-[1280px] flex-1 px-10">
+<div class="flex flex-wrap gap-6 justify-center">
+<div class="flex min-w-[200px] flex-1 flex-col gap-2 rounded-2xl p-8 border border-[#dbdfe6] dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm">
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-bold uppercase tracking-wider">Villages Covered</p>
+<p class="text-[#111318] dark:text-white tracking-light text-4xl font-black leading-tight">500+</p>
+<div class="w-12 h-1 bg-primary rounded-full mt-2"></div>
+</div>
+<div class="flex min-w-[200px] flex-1 flex-col gap-2 rounded-2xl p-8 border border-[#dbdfe6] dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm">
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-bold uppercase tracking-wider">Total Predictions</p>
+<p class="text-[#111318] dark:text-white tracking-light text-4xl font-black leading-tight">10k+</p>
+<div class="w-12 h-1 bg-primary rounded-full mt-2"></div>
+</div>
+<div class="flex min-w-[200px] flex-1 flex-col gap-2 rounded-2xl p-8 border border-[#dbdfe6] dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm">
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-bold uppercase tracking-wider">Price Transparency</p>
+<p class="text-[#111318] dark:text-white tracking-light text-4xl font-black leading-tight">100%</p>
+<div class="w-12 h-1 bg-primary rounded-full mt-2"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- How it Works Section -->
+<div class="flex justify-center py-20" id="how-it-works">
+<div class="layout-content-container flex flex-col max-w-[1280px] flex-1 px-10">
+<div class="flex flex-col gap-12 @container">
+<div class="flex flex-col gap-4 text-center items-center">
+<h2 class="text-[#111318] dark:text-white tracking-tight text-3xl font-black leading-tight @[480px]:text-4xl max-w-[720px]">
+                            How it Works
+                        </h2>
+<p class="text-[#4b5563] dark:text-gray-400 text-lg font-normal leading-normal max-w-[600px]">
+                            Our three-step process makes property valuation simple and accessible for everyone, regardless of technical expertise.
+                        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-0">
+<div class="flex flex-col gap-6 rounded-2xl border border-[#dbdfe6] dark:border-slate-700 bg-white dark:bg-slate-800 p-8 hover:shadow-xl transition-shadow">
+<div class="size-14 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined !text-3xl">edit_note</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-[#111318] dark:text-white text-xl font-bold leading-tight">1. Input Details</h3>
+<p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-relaxed">
+                                    Provide basic information like house size, location coordinates, and proximity to local amenities.
+                                </p>
+</div>
+</div>
+<div class="flex flex-col gap-6 rounded-2xl border border-[#dbdfe6] dark:border-slate-700 bg-white dark:bg-slate-800 p-8 hover:shadow-xl transition-shadow relative">
+<div class="size-14 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined !text-3xl">psychology</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-[#111318] dark:text-white text-xl font-bold leading-tight">2. AI Analysis</h3>
+<p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-relaxed">
+                                    Our advanced neural networks, specifically trained for rural market dynamics, process your data in seconds.
+                                </p>
+</div>
+</div>
+<div class="flex flex-col gap-6 rounded-2xl border border-[#dbdfe6] dark:border-slate-700 bg-white dark:bg-slate-800 p-8 hover:shadow-xl transition-shadow">
+<div class="size-14 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined !text-3xl">task_alt</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-[#111318] dark:text-white text-xl font-bold leading-tight">3. Instant Result</h3>
+<p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-relaxed">
+                                    Receive a comprehensive valuation report instantly, helping you make informed decisions for your future.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Social Impact Section -->
+<div class="flex justify-center py-20 bg-primary/5 dark:bg-primary/10" id="impact">
+<div class="layout-content-container flex flex-col max-w-[1280px] flex-1 px-10">
+<div class="flex flex-col gap-12 @container">
+<div class="flex flex-col gap-4">
+<h2 class="text-[#111318] dark:text-white tracking-tight text-3xl font-black leading-tight @[480px]:text-4xl max-w-[720px]">
+                            Our Social Impact
+                        </h2>
+<p class="text-[#4b5563] dark:text-gray-400 text-lg font-normal leading-normal max-w-[720px]">
+                            We are dedicated to bridging the information gap and ensuring fair pricing for every rural homeowner, protecting them from market exploitation.
+                        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="group flex flex-col gap-4 pb-3 bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="People collaborating in a village meeting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDl6YueC_cDJMDkUCnV_aWyF1TtI_qvgfwkgld98GWDM0L0WPgsXCGNnwarMnvGCaWHLcgBUo1zv8j1kKIhdU6NwJY3I3TYoKqMeQsccyRUfzDpDa27EA_-id2nnOmEekZB6a2xkSaXej5YVxjkFE55w639Nt835bkm5jXhpI5dRXiTL1qxq7h1u5i362_P0a2r8x2yCOIKTfL9eq8o7R6IpU2mo7oISYmLOSXxFGvaeFtZrBrg9xLy6hcSe5ONyxe1dThyZJKxK-1D");'></div>
+<div class="px-6 py-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">balance</span>
+<p class="text-[#111318] dark:text-white text-xl font-bold leading-normal">Fair Pricing for All</p>
+</div>
+<p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-relaxed">
+                                    Preventing predatory pricing practices by providing residents with data-backed market valuations that were previously inaccessible.
+                                </p>
+</div>
+</div>
+<div class="group flex flex-col gap-4 pb-3 bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="A small family farm at sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7bwtf1j8b5dK9ePjm7H6MO4PbEuvLbpPAGZiKqXgxYZ6unjb6nthVud34CAcJWmu44PaHsNMNZVKjpkda9iIJ8K9_TCgYt5QPbeTxBg71b2x7CRoYDbZ8pm1tB0I-_9IStYAZkUOtXxwl1O4sfASunIQtnx0nwmH2lhUDiV790nasrcRDXX26fi3SHtf6OIR2hWKmEIjsAlLZAhJujKopcd3fsJbioRTI8BWf8JTbEzxtGujnsrIqIAnqS2pJhB8UTypO7Qtdh-R8");'></div>
+<div class="px-6 py-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">groups</span>
+<p class="text-[#111318] dark:text-white text-xl font-bold leading-normal">Community Empowerment</p>
+</div>
+<p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-relaxed">
+                                    Empowering rural families with the knowledge to make informed financial decisions, build generational wealth, and stabilize local economies.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-[#f0f2f4] dark:border-slate-800 py-16">
+<div class="max-w-[1280px] mx-auto px-10 flex flex-col md:flex-row justify-between gap-12">
+<div class="flex flex-col gap-6 max-w-[320px]">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined">home_work</span>
+</div>
+<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight">AI House Predictor</h2>
+</div>
+<p class="text-[#616f89] dark:text-gray-400 text-sm leading-relaxed">
+                        Democratizing real estate data for rural and semi-urban communities worldwide. Join our mission for a fairer future.
                     </p>
 <div class="flex gap-4">
-<a href="catalog.html">
-    <button class="bg-primary-blush text-deep-mocha px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:shadow-lg hover:shadow-primary-blush/30 transition-all">
-        Explore the Collection
-        <span class="material-symbols-outlined">trending_flat</span>
-</button>
-</a>
-<a href="#section1">
-    <button class="bg-accent-mint text-deep-mocha border border-deep-mocha/5 px-8 py-4 rounded-xl font-bold hover:bg-accent-mint/70 transition-all">
-        How it Works
-    </button>
-</a>
-</div>
-</div>
-</div>
-</section>
-<section class="max-w-7xl mx-auto px-6 mb-24">
-<div class="flex justify-between items-end mb-8 border-b border-primary-blush/20 pb-6">
-<div>
-<h2 class="text-4xl font-serif italic mb-2 text-deep-mocha">Browse by <span class="not-italic font-display font-extrabold">Mood</span></h2>
-<p class="text-soft-charcoal/60 font-medium">Find the perfect piece for your next chapter</p>
-</div>
-<a class="text-deep-mocha font-bold text-sm flex items-center gap-1 group" href="#">
-                    View All Moodboards
-                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform text-primary-blush">arrow_forward</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="relative h-[500px] rounded-3xl overflow-hidden group cursor-pointer border border-primary-blush/10">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('assets/western wear/index.png');"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-primary-blush/80 via-transparent to-transparent"></div>
-<div class="absolute bottom-8 left-8">
-<h3 class="text-3xl font-serif italic text-deep-mocha mb-2">Women</h3>
-<p class="text-deep-mocha/70 text-sm mb-4 font-medium">Soft silhouettes &amp; floral lace</p>
-<span class="size-10 bg-white/60 backdrop-blur rounded-full flex items-center justify-center text-deep-mocha border border-white group-hover:bg-accent-lavender transition-all">
-<a href="womencatalog.html">
-    <span class="material-symbols-outlined">east</span>
-</a>
-</span>
-</div>
-</div>
-<div class="relative h-[500px] rounded-3xl overflow-hidden group cursor-pointer border border-primary-blush/10">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('assets/western wear/index1.png');"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-accent-mint/80 via-transparent to-transparent"></div>
-<div class="absolute bottom-8 left-8">
-<h3 class="text-3xl font-serif italic text-deep-mocha mb-2">Bold</h3>
-<p class="text-deep-mocha/70 text-sm mb-4 font-medium">Saturated hues &amp; sharp cuts</p>
-<span class="size-10 bg-white/60 backdrop-blur rounded-full flex items-center justify-center text-deep-mocha border border-white group-hover:bg-accent-lavender transition-all">
-<span class="material-symbols-outlined">east</span>
-</span>
-</div>
-</div>
-<div class="relative h-[500px] rounded-3xl overflow-hidden group cursor-pointer border border-primary-blush/10">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('assets/western wear/index2.png');"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-accent-lavender/80 via-transparent to-transparent"></div>
-<div class="absolute bottom-8 left-8">
-<h3 class="text-3xl font-serif italic text-deep-mocha mb-2">Minimal</h3>
-<p class="text-deep-mocha/70 text-sm mb-4 font-medium">Understated luxury &amp; neutrals</p>
-<span class="size-10 bg-white/60 backdrop-blur rounded-full flex items-center justify-center text-deep-mocha border border-white group-hover:bg-accent-lavender transition-all">
-<span class="material-symbols-outlined">east</span>
-</span>
-</div>
-</div>
-</div>
-</section>
-<section class="max-w-7xl mx-auto px-6 mb-24">
-<div class="bg-surface border border-primary-blush/10 rounded-[3rem] p-12 md:p-16 shadow-sm relative overflow-hidden">
-<div class="absolute -top-24 -right-24 w-64 h-64 bg-accent-mint/20 rounded-full blur-3xl"></div>
-<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-accent-lavender/20 rounded-full blur-3xl"></div>
-<div class="text-center mb-16 relative z-10" id="section1">
-<h2 class="text-4xl md:text-5xl font-serif italic mb-4 text-deep-mocha">How it <span class="not-italic font-display font-black">Works</span></h2>
-<p class="text-soft-charcoal max-w-2xl mx-auto">Luxury rental made effortless. Follow our simple journey from dream browsing to picture-perfect moments.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-5 gap-8 relative z-10">
-<div class="text-center flex flex-col items-center group">
-<div class="size-20 bg-accent-lavender/40 rounded-3xl flex items-center justify-center text-deep-mocha mb-6 group-hover:bg-accent-lavender/60 transition-colors border border-accent-lavender/50">
-<span class="material-symbols-outlined text-3xl">grid_view</span>
-</div>
-<h4 class="font-bold text-xs tracking-widest uppercase mb-2 text-primary-blush">Step 01</h4>
-<h3 class="font-bold text-sm text-deep-mocha mb-2 leading-tight">MAKE YOUR CHOICE</h3>
-<p class="text-xs text-soft-charcoal/70 leading-relaxed px-4">Browse our curated archive of designer dream pieces.</p>
-</div>
-<div class="text-center flex flex-col items-center group">
-<div class="size-20 bg-accent-mint/40 rounded-3xl flex items-center justify-center text-deep-mocha mb-6 group-hover:bg-accent-mint/60 transition-colors border border-accent-mint/50">
-<span class="material-symbols-outlined text-3xl">straighten</span>
-</div>
-<h4 class="font-bold text-xs tracking-widest uppercase mb-2 text-primary-blush">Step 02</h4>
-<h3 class="font-bold text-sm text-deep-mocha mb-2 leading-tight">THE DREAM FIT</h3>
-<p class="text-xs text-soft-charcoal/70 leading-relaxed px-4">Select your perfect size and reserve your special dates.</p>
-</div>
-<div class="text-center flex flex-col items-center group">
-<div class="size-20 bg-primary-blush/20 rounded-3xl flex items-center justify-center text-deep-mocha mb-6 group-hover:bg-primary-blush/40 transition-colors border border-primary-blush/30">
-<span class="material-symbols-outlined text-3xl">auto_fix_high</span>
-</div>
-<h4 class="font-bold text-xs tracking-widest uppercase mb-2 text-primary-blush">Step 03</h4>
-<h3 class="font-bold text-sm text-deep-mocha mb-2 leading-tight">STYLE YOUR LOOK</h3>
-<p class="text-xs text-soft-charcoal/70 leading-relaxed px-4">Complete your outfit with our hand-picked accessories.</p>
-</div>
-<div class="text-center flex flex-col items-center group">
-<div class="size-20 bg-accent-lavender/40 rounded-3xl flex items-center justify-center text-deep-mocha mb-6 group-hover:bg-accent-lavender/60 transition-colors border border-accent-lavender/50">
-<span class="material-symbols-outlined text-3xl">local_shipping</span>
-</div>
-<h4 class="font-bold text-xs tracking-widest uppercase mb-2 text-primary-blush">Step 04</h4>
-<h3 class="font-bold text-sm text-deep-mocha mb-2 leading-tight">DELIVERY TO DOOR</h3>
-<p class="text-xs text-soft-charcoal/70 leading-relaxed px-4">Receive your custom-fit look with seamless logistics.</p>
-</div>
-<div class="text-center flex flex-col items-center group">
-<div class="size-20 bg-accent-mint/40 rounded-3xl flex items-center justify-center text-deep-mocha mb-6 group-hover:bg-accent-mint/60 transition-colors border border-accent-mint/50">
-<span class="material-symbols-outlined text-3xl">photo_camera</span>
-</div>
-<h4 class="font-bold text-xs tracking-widest uppercase mb-2 text-primary-blush">Step 05</h4>
-<h3 class="font-bold text-sm text-deep-mocha mb-2 leading-tight">PICTURE PERFECT</h3>
-<p class="text-xs text-soft-charcoal/70 leading-relaxed px-4">Enjoy your event; hassle-free pickup is always included.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="max-w-7xl mx-auto px-6 mb-24">
-<h2 class="text-center text-4xl font-serif italic mb-12 text-deep-mocha">Voices of <span class="not-italic font-display font-black">Pastel.</span></h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="bg-surface p-8 rounded-[2rem] border border-primary-blush/10 shadow-sm flex flex-col gap-6">
-<div class="flex items-center gap-4">
-<div class="size-14 rounded-full overflow-hidden border-2 border-primary-blush/30">
-<img alt="Customer" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC119v73dM1M_ws2vOCZ-RO5qepGw2-5pniNokeqaXwFf-fh2574zVGMLQMiQecb8im6mIf8SBXOmjJG4veQzPqwlooME4LYJvon2Og9hCzrngrjmNl8vE8R_m17gd2ciz0uC4WmgO0AXU5r7fgdLsLuTE4kejye4kHGoaC2glt-3nEZ5jnilxH7fxmwn6-AqHSx8xG4CRpMi9MKI11PEKU2ym08pPT-ureB-F3BVHiKrQOZHP8NRRgZNgV3uJ_J2x8Lx8q6M0RJOI"/>
-</div>
-<div>
-<h5 class="font-bold text-deep-mocha">Elena Thorne</h5>
-<p class="text-xs text-soft-charcoal/60">London, UK</p>
-</div>
-</div>
-<p class="text-soft-charcoal italic leading-relaxed text-sm">"The Valentino gown was absolutely breathtaking. The fit was perfect thanks to their tailored approach, and the return was so easy."</p>
-<div class="flex text-primary-blush">
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-</div>
-</div>
-<div class="bg-accent-lavender/10 p-8 rounded-[2rem] border border-accent-lavender/30 shadow-sm flex flex-col gap-6">
-<div class="flex items-center gap-4">
-<div class="size-14 rounded-full overflow-hidden border-2 border-accent-lavender/30">
-<img alt="Customer" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIHYcRWxPU8UG1NgnJnlPGcUiRTv3Pn8KlUw4Ca6_vbETw0z__c_YHKOH4xKDiTiNljkZrCqE3HBOwTDA9_PDJ-bT_K2v7gswgM0zS5EdpagOjx9H18ucXzsAbl_xKLU05in-AA1f7czuM79CRLMwOpO-TbeEDRsgYrLUj-T6HAH8sL8BHmdBhF17yRCPMEOqQwHtVP0q4wPQAVmVx-msjk90jPnRwol4PdMYO9Gzdj-JfjaRjoj_Bipm9Rj68YQXGC20ncUYtJdg"/>
-</div>
-<div>
-<h5 class="font-bold text-deep-mocha">Sophie Chen</h5>
-<p class="text-xs text-soft-charcoal/60">Paris, FR</p>
-</div>
-</div>
-<p class="text-soft-charcoal italic leading-relaxed text-sm">"I love the conscious mission of Pastel. Renting luxury feels like a smarter way to celebrate fashion without the waste."</p>
-<div class="flex text-primary-blush">
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-</div>
-</div>
-<div class="bg-surface p-8 rounded-[2rem] border border-primary-blush/10 shadow-sm flex flex-col gap-6">
-<div class="flex items-center gap-4">
-<div class="size-14 rounded-full overflow-hidden border-2 border-primary-blush/30">
-<img alt="Customer" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcgBNeyoG5vPcHBaJMtw0jbckqaAZZ4Yf4YtifEs0CYV3YHfS2DqnTTfa60CD4ILATyuZNeP9fMmZN2ycWoVYAFQIOZ8zwbr5wVHCMoDyX0_vgyJDqKRoVzVxCGensnaDuwR_xsbetCo_yxu897tbz0XtUN4uvyacBfa-pxu0T9Qs9BpfhBnpY8kTjsqh7-hGqI916dupwLnSapBxsSY_xjQFZM9RpgaHtT-ffMHcQ2R6or7I9HgHWnLUSsUhv1PkqotG-e7i9cE4"/>
-</div>
-<div>
-<h5 class="font-bold text-deep-mocha">Marcus Wright</h5>
-<p class="text-xs text-soft-charcoal/60">Berlin, DE</p>
-</div>
-</div>
-<p class="text-soft-charcoal italic leading-relaxed text-sm">"The accessory styling service is a game changer. They curated my entire gala look and it was effortless and stunning."</p>
-<div class="flex text-primary-blush">
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-</div>
-</div>
-</div>
-</section>
-<section class="max-w-7xl mx-auto px-6 mb-24">
-<h2 class="text-center text-4xl font-serif italic mb-12 text-deep-mocha">Latest in the <span class="not-italic font-display font-black">Archive.</span></h2>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-<div class="group cursor-pointer">
-<div class="aspect-[3/4] rounded-2xl overflow-hidden mb-4 relative">
-<div class="absolute top-3 left-3 z-10 bg-white/80 backdrop-blur px-3 py-1 rounded-full border border-primary-blush/20 text-[10px] font-bold uppercase text-deep-mocha">New Arrival</div>
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAEl9ni0OdJzyPxA71ysRzFNYBbUcM_YGQMg6rpbMTquVBackXzKCSef1RwELYZivpR-CVQkV58BB53NTrHea3dMbvszNpTeZSWwBLnM6yttQzTx5h8ee10Qsrc67PHO_gBSzcCb6gVdHMYLcsbPjkWMqEfJoyrEINmEtqPi4VUdoJQuFiT0hWK3tVEyFw-sXzP5Q_e1MoJ8hK9hMujFDXmpFEH8oHCUH5PXhUZFZh8es_jJvEODIDffjPyPB9XLqpbeEfU4nfw_Ak');"></div>
-<div class="absolute inset-0 bg-primary-blush/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<button class="bg-white text-deep-mocha px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform shadow-md">Quick Rent</button>
-</div>
-</div>
-<div class="flex justify-between items-start px-2">
-<div>
-<h4 class="font-bold text-sm text-deep-mocha">Chloé Silk Blouse</h4>
-<p class="text-xs text-soft-charcoal/60">Soft Cream · Size 38</p>
-</div>
-<p class="text-soft-charcoal font-bold text-sm">$45</p>
-</div>
-</div>
-<div class="group cursor-pointer">
-<div class="aspect-[3/4] rounded-2xl overflow-hidden mb-4 relative">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD0QamP4VVZ0P6ZSB99kd21QY37xDJktEVzuQrcJqsLuPJ3VHcP86YJ04wRc4G78WPT7VeSjXVCPRDynSTqsmyVaLSQbDDp8foxyco23IQk1L_m2wcqvoxzKxRdBVBAKGbAm8EmBiUgFCISTdwjQ1RBmhFHb6VnUWM0JUajK9158I1-lVQ_UuRQS-26EgGAPaqkXQ_p3aeaJL5xPrIf1Wg406F6keKRIX-BFk06oxFaIAZ2JVFkuG21As0svPfCQ11dZj5uid7qGP0');"></div>
-<div class="absolute inset-0 bg-accent-mint/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<button class="bg-white text-deep-mocha px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform shadow-md">Quick Rent</button>
-</div>
-</div>
-<div class="flex justify-between items-start px-2">
-<div>
-<h4 class="font-bold text-sm text-deep-mocha">Sage Wool Coat</h4>
-<p class="text-xs text-soft-charcoal/60">Dusty Green · Size 36</p>
-</div>
-<p class="text-soft-charcoal font-bold text-sm">$85</p>
-</div>
-</div>
-<div class="group cursor-pointer">
-<div class="aspect-[3/4] rounded-2xl overflow-hidden mb-4 relative">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXB90rRT5CFAnK4sDcIDSDKx3JHiqiFwZwjliYKGJimVZeF5tWzwKPX0HoBlzvgc1pLaJrjx8310Ci-MBmnTYDa_k-aCjyTPSGIkVEotrjzLv2ZWbAngIci2kYgqzpGuuR6HkA4dUbtTVQ3FZZv0D8Pl785eiBQB39jb3MXYF0fJDaPADHfNtyms-SSQwEbOqnbgsO0AFneu6J-NviwpQp8CDI4ip0kss9bqvehIyUfLrVATpynOPz0GS2GMIUf4zxsdwxnVKnvfk');"></div>
-<div class="absolute inset-0 bg-accent-lavender/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<button class="bg-white text-deep-mocha px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform shadow-md">Quick Rent</button>
-</div>
-</div>
-<div class="flex justify-between items-start px-2">
-<div>
-<h4 class="font-bold text-sm text-deep-mocha">Blush Carryall</h4>
-<p class="text-xs text-soft-charcoal/60">Designer Accessory</p>
-</div>
-<p class="text-soft-charcoal font-bold text-sm">$35</p>
-</div>
-</div>
-<div class="group cursor-pointer">
-<div class="aspect-[3/4] rounded-2xl overflow-hidden mb-4 relative">
-<div class="absolute top-3 left-3 z-10 bg-accent-lavender/80 backdrop-blur px-3 py-1 rounded-full border border-primary-blush/20 text-[10px] font-bold uppercase text-deep-mocha">Rare Piece</div>
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3OOL9KWTNl8DpxPGv38fdEmkCmTvzfOJZ6ruv1NrFJ_Oxrrpnz-_3oGY79HKQf99BfaRNtdIOMltb4SdPSzGST7O-l6eQbz2et-Bq5FUCgLKFl1KYmYgdlNoBkDgX8VvxOxx6H5iImeIfB91IKsmzC2rZbeyFESsiqSWWuYQAWo9jJVqZU15PbdbIalpjXmLI23hq_YKy-2P0Z5VnyZYD1XYGXG_BvdPZBtGmpmKuMKxx4VUGY8kzVT-ADJb_TgHG0LytVydqox8');"></div>
-<div class="absolute inset-0 bg-primary-blush/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<button class="bg-white text-deep-mocha px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform shadow-md">Quick Rent</button>
-</div>
-</div>
-<div class="flex justify-between items-start px-2">
-<div>
-<h4 class="font-bold text-sm text-deep-mocha">Silk Slip Gown</h4>
-<p class="text-xs text-soft-charcoal/60">Mauve Pearl · Size 40</p>
-</div>
-<p class="text-soft-charcoal font-bold text-sm">$95</p>
-</div>
-</div>
-</div>
-</section>
-</main>
-<footer class="bg-accent-lavender/10 border-t border-primary-blush/20 pt-24 pb-12 relative">
-<div class="max-w-7xl mx-auto px-6 mb-20">
-<div class="bg-surface/50 border border-primary-blush/20 rounded-[2.5rem] p-10 md:p-12 flex flex-col md:flex-row items-center justify-between gap-10">
-<div class="max-w-md">
-<h3 class="text-3xl font-serif italic text-deep-mocha mb-3">Join the <span class="not-italic font-display font-black">Community</span></h3>
-<p class="text-soft-charcoal text-sm leading-relaxed">Be the first to hear about new archive drops, exclusive styling events, and our sustainability journey.</p>
-</div>
-<div class="w-full md:w-auto flex flex-col sm:flex-row gap-3">
-<input class="glass-input rounded-full px-8 py-4 w-full sm:w-[320px] focus:ring-2 focus:ring-primary-blush/30 focus:border-primary-blush border-none text-sm placeholder:text-soft-charcoal/40 text-deep-mocha" placeholder="Enter your email" type="email"/>
-<form action="#">
-    <button class="bg-primary-blush hover:bg-primary-blush/90 text-deep-mocha px-10 py-4 rounded-full font-bold text-sm transition-all shadow-lg shadow-primary-blush/20" type="submit">
-        Subscribe
-    </button>
-</form>
-</div>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-<div class="col-span-1 md:col-span-2">
-<div class="flex items-center gap-3 mb-8">
-<div class="size-10 bg-primary-blush rounded-lg flex items-center justify-center text-deep-mocha">
-<span class="material-symbols-outlined">temp_preferences_custom</span>
-</div>
-<h2 class="text-2xl font-bold tracking-tighter font-display uppercase text-deep-mocha">PASTEL</h2>
-</div>
-<p class="text-soft-charcoal/80 max-w-sm text-lg mb-8 font-light leading-relaxed">
-                    Redefining luxury fashion through conscious circularity. Rent the archive, preserve the planet.
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-[#111318] dark:text-white uppercase text-xs tracking-widest">Platform</h4>
+<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Predictor</a>
+<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Data Sources</a>
+<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">API</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-[#111318] dark:text-white uppercase text-xs tracking-widest">Company</h4>
+<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">About Us</a>
+<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Impact Stories</a>
+<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Careers</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-[#111318] dark:text-white uppercase text-xs tracking-widest">Legal</h4>
+<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Privacy</a>
+<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Terms</a>
+<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Cookie Policy</a>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-10 mt-16 pt-8 border-t border-[#f0f2f4] dark:border-slate-800">
+<p class="text-[#616f89] dark:text-gray-500 text-xs text-center md:text-left">
+                    © 2023 AI House Predictor. All rights reserved. Built with passion for rural development.
                 </p>
-<div class="flex gap-4">
-<a class="size-10 rounded-full border border-primary-blush/30 flex items-center justify-center hover:bg-primary-blush hover:border-primary-blush transition-all text-deep-mocha" href="#">
-<span class="material-symbols-outlined text-sm">public</span>
-</a>
-<a class="size-10 rounded-full border border-primary-blush/30 flex items-center justify-center hover:bg-primary-blush hover:border-primary-blush transition-all text-deep-mocha" href="#">
-<span class="material-symbols-outlined text-sm">person_pin_circle</span>
-</a>
-<a class="size-10 rounded-full border border-primary-blush/30 flex items-center justify-center hover:bg-primary-blush hover:border-primary-blush transition-all text-deep-mocha" href="#">
-<span class="material-symbols-outlined text-sm">alternate_email</span>
-</a>
-</div>
-</div>
-<div>
-<h5 class="text-deep-mocha font-bold mb-6 uppercase text-xs tracking-widest">Experience</h5>
-<ul class="space-y-4 text-soft-charcoal/70 text-sm">
-<li><a class="hover:text-primary-blush transition-colors" href="#">Personal Styling</a></li>
-<li><a class="hover:text-primary-blush transition-colors" href="#">Gift Cards</a></li>
-<li><a class="hover:text-primary-blush transition-colors" href="#section1">How it Works</a></li>
-<li><a class="hover:text-primary-blush transition-colors" href="#">Sustainability Report</a></li>
-</ul>
-</div>
-<div>
-<h5 class="text-deep-mocha font-bold mb-6 uppercase text-xs tracking-widest">Support</h5>
-<ul class="space-y-4 text-soft-charcoal/70 text-sm">
-<li><a class="hover:text-primary-blush transition-colors" href="#">FAQ</a></li>
-<li><a class="hover:text-primary-blush transition-colors" href="#">Shipping &amp; Returns</a></li>
-<li><a class="hover:text-primary-blush transition-colors" href="#">Contact Us</a></li>
-<li><a class="hover:text-primary-blush transition-colors" href="#">Privacy Policy</a></li>
-</ul>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-6 pt-12 border-t border-primary-blush/10 flex flex-col md:flex-row justify-between items-center gap-6">
-<p class="text-soft-charcoal/40 text-xs">© 2024 PASTEL Fashion Rental. All rights reserved.</p>
-<div class="flex gap-8 text-[10px] font-bold tracking-widest uppercase text-soft-charcoal/30">
-<span>Verified B-Corp</span>
-<span>Net Zero 2030</span>
-<span>Ethics First</span>
-</div>
 </div>
 </footer>
-
+</div>
+</div>
 </body></html>
