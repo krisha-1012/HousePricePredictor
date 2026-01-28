@@ -1,4 +1,5 @@
 # Project Title
+Smart House Price Predictor
 
 ## 📌 Problem Statement
 House prices are often inaccurately estimated due to subjective and manual methods, creating financial risk for buyers and sellers. Despite the availability of housing data, the lack of transparent and automated price prediction systems prevents reliable, data-driven property valuation.
