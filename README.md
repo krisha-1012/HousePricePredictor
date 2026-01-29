@@ -31,7 +31,7 @@ Source, size, and usage of dataset.
 
 ## 🖥️ Installation & Execution
 ```bash
-git clone <repository-url>
-cd project-name
+git clone https://github.com/krisha-1012/HousePricePredictor.git
+cd HousePricePredictor
 pip install -r requirements.txt
 python app.py
